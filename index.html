@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style-main.css">
+    <link rel="stylesheet" type="text/css" href="fa/web-fonts-with-css/css/fontawesome-all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+   
+
+    <script>
+    	var app = angular.module("myApp", ["ngRoute"]);
+    	app.config(function($routeProvider)
+    	{
+    		$routeProvider
+    		.when("/",{
+    			templateUrl : "home.htm"
+    		})
+    		.when("/event", {
+    			templateUrl : "event.htm"
+    		})
+            .when("/map", {
+    			templateUrl : "map.htm"
+    		});
+    	});
+            
+    </script>
+  
+</head>
+<body style="margin:0;height: 1500px" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div ng-app="myApp" class="container"><nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+  <a class="navbar-brand" style="padding-left: 10%;" href="#">WontenJogja.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar navbar-nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" href="#!">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Info Wisata</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Wisata Pantai</a>
+            <a class="dropdown-item" href="#">Wisata Alam</a>
+            <a class="dropdown-item" href="#">Wisata Budaya & Sejarah</a>
+            <a class="dropdown-item" href="#">Desa Wisata</a>  
+          </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!event">Event</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Kuliner</a>
+      </li>  
+        <li class="nav-item">
+        <a class="nav-link" href="#!peta">Peta</a>
+      </li>  
+    </ul>
+  </div>  
+</nav>   
+<ng-view></ng-view>
+<div id="map" style="width:100%;height:500px"></div>    
+</div> 
+<script>
+    function myMap() {
+      var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {center: myCenter, zoom: 5};
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({position:myCenter});
+      marker.setMap(map);
+
+      // Zoom to 9 when clicking on marker
+      google.maps.event.addListener(marker,'click',function() {
+        map.setZoom(9);
+        map.setCenter(marker.getPosition());
+      });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFr-5W01Ysf126Yjul98jpCw43ibxhxWk&callback=myMap"></script>    
+</body>    
+</html>
