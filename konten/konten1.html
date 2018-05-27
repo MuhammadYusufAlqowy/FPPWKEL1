@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-main.css">
+    <link rel="stylesheet" type="text/css" href="../fa/web-fonts-with-css/css/fontawesome-all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+   
+
+    <script>
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function($routeProvider)
+      {
+        $routeProvider
+        .when("/",{
+          templateUrl : "home.htm"
+        })
+        .when("/event", {
+          templateUrl : "event.htm"
+        })
+            .when("/map", {
+          templateUrl : "map.htm"
+        });
+      });
+            
+    </script>
+  
+</head>
+<body style="margin:0;height: 1500px" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div ng-app="myApp" class="container"><nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+  <a class="navbar-brand" style="padding-left: 10%;" href="#">WontenJogja.com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar navbar-nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" href="#!">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Info Wisata</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Wisata Pantai</a>
+            <a class="dropdown-item" href="#">Wisata Alam</a>
+            <a class="dropdown-item" href="#">Wisata Budaya & Sejarah</a>
+            <a class="dropdown-item" href="#">Desa Wisata</a>  
+          </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!event">Event</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="kuliner.html">Kuliner</a>
+      </li>  
+        <li class="nav-item">
+        <a class="nav-link" href="#!peta">Peta</a>
+      </li>  
+    </ul>
+  </div>  
+</nav>   
+<ng-view></ng-view>
+<div id="map" style="width:100%;height:500px"></div>    
+</div> 
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <section id="wrapper">
+ 
+        <div class="row">   
+          <div class="col-md-12"> 
+            <div class="masthead well well-sm">
+              <h1>
+                <a href="index.asp"><span class="light text-primary">knowledge</span><span style="font-family: Lato, sans-serif; font-weight: 300; text-decoration: none; rgb(45,137,239);">|</span><span class="dark text-primary">Base</span></a>
+              </h1>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">   
+          <div class="col-md-10"> 
+          
+            <div class="article">
+              <h3>Pellentesque habitant morbi tristique</h3>
+              
+              <ul class="list-unstyled list-inline">
+                <li><i class="fa fa-calendar"></i> February 02, 2013</li>
+                <li><i class="fa fa-user"></i> Sergio Rodriguez</li>
+                <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
+              </ul>
+
+              <div class="article-content">
+  
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
+
+                <blockquote class="hero">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.</p>
+                  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+                </blockquote>
+
+                <p>Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
+              
+              </div>
+
+              <ul class="list-unstyled list-inline blog-tags">
+                <li><a href="#"><span class="fa fa-tag"></span> Example heading</a></li>
+                <li><a href="#"><span class="fa fa-tag"></span> Example heading</a></li>
+                <li><a href="#"><span class="fa fa-tag"></span> Example heading</a></li>
+              </ul>
+                
+            </div>
+
+          </div>
+          
+          <div class="col-md-2">
+            
+            <div>
+            
+<h3>Tools</h3>
+              
+<div class="list-group" id="list-group">
+
+  <a href="#" class="list-group-item">
+    <span class="fa-stack fa-lg">
+    <i class="fa-stack-2x fa fa-circle "></i>
+    <i class="fa-stack-1x text-primary fa fa-envelope "></i>
+    </span>
+    <span class="">Email</span>
+  </a>
+  <a href="#" class="list-group-item">
+    <span class="fa-stack fa-lg">
+    <i class="fa-stack-2x fa fa-circle "></i>
+    <i class="fa-stack-1x text-primary fa fa-envelope "></i>
+    </span>
+    <span class="">Email</span>
+  </a>
+  <a href="#" class="list-group-item">
+    <span class="fa-stack fa-lg">
+    <i class="fa-stack-2x fa fa-circle "></i>
+    <i class="fa-stack-1x text-primary fa fa-envelope "></i>
+    </span>
+    <span class="">Email</span>
+  </a>
+  <a href="#" class="list-group-item">
+    <span class="fa-stack fa-lg">
+    <i class="fa-stack-2x fa fa-circle "></i>
+    <i class="fa-stack-1x text-primary fa fa-envelope "></i>
+    </span>
+    <span class="">Email</span>
+  </a>
+  <a href="#" class="list-group-item">
+    <span class="fa-stack fa-lg">
+    <i class="fa-stack-2x fa fa-circle "></i>
+    <i class="fa-stack-1x text-primary fa fa-envelope "></i>
+    </span>
+    <span class="">Email</span>
+  </a>
+</div>
+
+              <div class="headline"><h3>Tags</h3></div>
+            
+              <ul class="list-unstyled list-inline blog-tags">
+                <li><a href="#"><i class="fa fa-tags"></i> Business</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Music</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Internet</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Education</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> People</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Math</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Photos</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Electronics</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Apple</a></li>
+                <li><a href="#"><i class="fa fa-tags"></i> Canada</a></li>
+              </ul>
+
+            </div>
+              
+          </div> 
+        </div>
+ 
+ 
+                
+    </section>
+</div>
+
+</body>    
+</html>
