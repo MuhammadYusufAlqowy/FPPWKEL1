@@ -98,3 +98,14 @@ double-ring {
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
+
+.article-content {
+  text-align: justify;
+}
+
+.masthead-sm{
+  font-family: Lato, sans-serif; 
+  font-weight: 300; 
+  text-decoration: none; 
+  rgb(45,137,239);
+}

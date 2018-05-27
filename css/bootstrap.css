@@ -65,7 +65,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: justify;
   background-color: #fff;
 }
 
@@ -4331,14 +4331,16 @@ input[type="button"].btn-block {
 }
 
 .card {
-  position: relative;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #e3ecfc;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -4363,6 +4365,8 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+  background: #F8F8FF;
+
 }
 
 .card-title {
@@ -4376,6 +4380,7 @@ input[type="button"].btn-block {
 
 .card-text:last-child {
   margin-bottom: 0;
+  text-align: justify;
 }
 
 .card-link:hover {
@@ -4433,7 +4438,8 @@ input[type="button"].btn-block {
 }
 
 .card-img {
-  width: 100%;
+  width: 100px;
+  height: 100px;
   border-radius: calc(0.25rem - 1px);
 }
 
