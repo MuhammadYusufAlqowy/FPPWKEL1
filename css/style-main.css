@@ -5,6 +5,12 @@
     font-size: 16px;
     width: 100%;
 }
+
+.jumbotron {
+  background-image: url(../img/kuliner1.jpg);
+  color:#ffffff;
+}
+
 .navbar-brand
 {
     font-size: 30px;
@@ -92,4 +98,3 @@ double-ring {
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
-        
