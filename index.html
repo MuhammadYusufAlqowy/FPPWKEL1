@@ -9,7 +9,6 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="engine1/style.css" />
     <script type="text/javascript" src="engine1/jquery.js"></script>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
    
@@ -33,42 +32,119 @@
     </script>
   
 </head>
-<body style="margin:0;height: 1500px" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-<div ng-app="myApp" class="container"><nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
-  <a class="navbar-brand" style="padding-left: 10%;" href="#">WontenJogja.com</a>
+    
+    
+<body style="margin:0px; height: 1500px" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">
+    
+<div ng-app="myApp" class="container-fluid">
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-success navbar-dark sticky-top">
+  <a class="navbar-brand text-white" href="#!">COMPANY LOGO</a>
+<!-- Collapse navbar  -->   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar navbar-nav justify-content-end">
       <li class="nav-item">
-        <a class="nav-link" href="#!">Home</a>
+        <a class="nav-link text-white" href="#!">Home</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Info Wisata</a>
+          <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#">Info Wisata</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Wisata Pantai</a>
-            <a class="dropdown-item" href="#">Wisata Alam</a>
-            <a class="dropdown-item" href="#">Wisata Budaya & Sejarah</a>
-            <a class="dropdown-item" href="#">Desa Wisata</a>  
+            <a class="dropdown-item " href="#">Wisata Pantai</a>
+            <a class="dropdown-item " href="#">Wisata Alam</a>
+            <a class="dropdown-item " href="#">Wisata Budaya & Sejarah</a>
+            <a class="dropdown-item " href="#">Desa Wisata</a>  
           </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#!event">Event</a>
+        <a class="nav-link text-white" href="#!event">Event</a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="kuliner.html">Kuliner</a>
+        <a class="nav-link text-white" href="kuliner.html">Kuliner</a>
       </li>  
         <li class="nav-item">
-        <a class="nav-link" href="#!peta">Peta</a>
-      </li>  
+        <a class="nav-link text-white" href="#!peta">Peta</a>
+      </li> 
+        <form class="form-inline" action="#">
+            <input class="form-control mr-sm-2 elipse" type="text" placeholder="Search">
+            <button class="btn btn-danger elipse" type="submit"><i class="fas fa-search"></i></button>
+          </form>  
     </ul>
-  </div>  
-</nav>   
-<ng-view></ng-view>
-<div id="map" style="width:100%;height:500px"></div>    
+  </div> 
+  
+</nav> 
+<!-- Jumbotron -->  
+<div class="jumbotron jumbotron-fluid bg-success text-center" style="margin: 0px;">
+  <div class="container">
+    <h1 class="display-1 text-white">COMPANY LOGO</h1>
+      <h4 class="text-white">Portal Informasi Wisata Yogyakarta</h4>
+      <br><br>
+    <a href="#tentang" class="text-danger"><i class="fas fa-angle-down fa-8x icon"></i></a>
+  </div>
 </div> 
+
+<div class="container bg-white">
+<!-- Bread Crumb --> 
+<ul class="breadcrumb text-dark bg-white link" style="font-size: 16px;">
+        <li class="breadcrumb-item"><a href="#!">Home</a></li>
+        <li class="breadcrumb-item active"> Home</li>
+</ul>    
+<!-- ng-view-->    
+<ng-view></ng-view>
+</div>
+</div>
+<!-- Footer -->    
+<div class="container-fluid bg-success" style="padding-top: 50px;">
+<div class="container bg-success text-white">
+    <div class="row bg-success text-white" style=" padding-bottom: 20px; border-bottom: 0.1px solid white">
+        <div class="col-sm-4">
+        <h4><a href="#!" class="link"><i class="fas fa-frog fa-7x"></i><br>Company Name</a></h4>
+        <br>  
+            <h4 class="footer">
+            <a href="#" class="link">Home</a><br>
+            <a href="#" class="link">About Us</a><br>
+            <a href="#" class="link">Contact</a><br>
+            <a href="#" class="link">Services</a><br>
+            </h4>    
+        </div>
+        <div class="col-md-4">
+            <h2>Today Update</h2>
+            <br>
+            <h4><a href="#" class="link">Yogyakara menjadi destinasi wisata terbaik selain Bali dan Bandung</a></h4>
+            <h4><a href="#" class="link">Yogyakara menjadi destinasi wisata terbaik selain Bali dan Bandung</a></h4>
+            <h4><a href="#" class="link">Yogyakara menjadi destinasi wisata terbaik selain Bali dan Bandung</a></h4>
+        </div>
+        <div class="col-md-4">
+            <h2>Subscribe</h2>
+            <br>
+            <h4>Ikuti kami untuk mendapatkan informasi terbaru yang akan dikirim lewat email</h4>
+            <form class="form-inline" action="#">
+                <input type="email" placeholder ="Email" class="form-control mb-2 mr-sm-2 elipse">
+                <button type="submit" class="btn btn-danger mb-2 elipse">Subscribe</button>
+            </form>
+            <br>
+            <h2>Connect With Us</h2>
+            <br>
+            <h4 class="text-white">
+                <a href="#" class="text-danger"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#" class="text-danger"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-danger"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="#" class="text-danger"><i class="fab fa-github-square fa-2x"></i></a>
+                <a href="#" class="text-danger"><i class="fab fa-google-plus-g fa-2x"></i></a>
+            </h4>    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin: 0px; padding-top: 20px;">
+            <p class="footer">Copyright &copy; 2018 All Right Reserved <a href="#!" class="link">CompanyName.com</a></p>
+        </div>
+    </div>
+</div>    
+</div>   
+   
 <script>
     function myMap() {
       var myCenter = new google.maps.LatLng(51.508742,-0.120850);
