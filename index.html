@@ -32,6 +32,24 @@
             .when("/akomodasi", {
           templateUrl : "akomodasi.htm"
         })
+            .when("/wisata", {
+          templateUrl : "wisata.htm"
+        })
+            .when("/wisata-pantai", {
+          templateUrl : "wisata-pantai.htm"
+        })
+            .when("/wisata-alam", {
+          templateUrl : "wisata-alam.htm"
+        })
+            .when("/wisata-museum", {
+          templateUrl : "wisata-museum.htm"
+        })
+            .when("/wisata-minat-khusus", {
+          templateUrl : "wisata-minat-khusus.htm"
+        })
+            .when("/wisata-budaya-dan-sejarah", {
+          templateUrl : "wisata-budaya-dan-sejarah.htm"
+        })
     	});
             
     </script>
@@ -39,10 +57,8 @@
 </head>
     
     
-<body style="margin:0px; height: 1500px;" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">
-    
-<div ng-app="myApp" class="container-fluid">
-    
+<body style="margin:0px; height: 1500px;" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">    
+<div ng-app="myApp" class="container-fluid">  
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md bg-success navbar-dark sticky-top">
   <a class="navbar-brand text-white" href="#!">COMPANY LOGO</a>
@@ -56,12 +72,13 @@
         <a class="nav-link text-white" href="#!">Home</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#">Info Wisata</a>
+          <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#!wisata">Info Wisata</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item " href="#">Wisata Pantai</a>
-            <a class="dropdown-item " href="#">Wisata Alam</a>
-            <a class="dropdown-item " href="#">Wisata Budaya & Sejarah</a>
-            <a class="dropdown-item " href="#">Desa Wisata</a>  
+            <a class="dropdown-item" href="#!wisata-pantai">Wisata Pantai</a>
+            <a class="dropdown-item" href="#!wisata-alam">Wisata Alam</a>
+            <a class="dropdown-item" href="#!wisata-budaya-dan-sejarah">Wisata Budaya & Sejarah</a>
+            <a class="dropdown-item" href="#!wisata-museum">Wisata Museum</a>
+            <a class="dropdown-item" href="#!wisata-minat-khusus">Wisata Minat Khusus</a>
           </div>
       </li>
       <li class="nav-item">
@@ -82,24 +99,9 @@
           </form>  
     </ul>
   </div> 
-  
-</nav> 
-<!-- Jumbotron -->  
-<div class="jumbotron jumbotron-fluid bg-success text-center" style="margin: 0px;">
-  <div class="container">
-    <h1 class="display-1 text-white">COMPANY LOGO</h1>
-      <h4 class="text-white">Portal Informasi Wisata Yogyakarta</h4>
-      <br><br>
-    <a href="#tentang" class="text-danger"><i class="fas fa-angle-down fa-8x icon"></i></a>
-  </div>
-</div> 
 
-<div class="container bg-white">
-<!-- Bread Crumb --> 
-<ul class="breadcrumb text-dark bg-white link" style="font-size: 16px;">
-        <li class="breadcrumb-item"><a href="#!">Home</a></li>
-        <li class="breadcrumb-item active"> Home</li>
-</ul>    
+</nav> 
+
 <!-- ng-view-->    
 <ng-view></ng-view>
 </div>
