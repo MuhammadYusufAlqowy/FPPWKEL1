@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style-main.css">
+    <link rel="stylesheet" type="text/css" href="css/style-main-event.css">
+    <link rel="stylesheet" type="text/css" href="css/akomodasi-banner-styles.css">
     <link rel="stylesheet" type="text/css" href="fa/web-fonts-with-css/css/fontawesome-all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -15,7 +17,7 @@
 
     <script>
     	var app = angular.module("myApp", ["ngRoute"]);
-    	app.config(function($routeProvider)
+        app.config(function($routeProvider)
     	{
     		$routeProvider
     		.when("/",{
@@ -26,7 +28,10 @@
     		})
             .when("/map", {
     			templateUrl : "map.htm"
-    		});
+    		})
+            .when("/akomodasi", {
+          templateUrl : "akomodasi.htm"
+        })
     	});
             
     </script>
@@ -34,7 +39,7 @@
 </head>
     
     
-<body style="margin:0px; height: 1500px" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">
+<body style="margin:0px; height: 1500px;" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">
     
 <div ng-app="myApp" class="container-fluid">
     
@@ -48,7 +53,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar navbar-nav justify-content-end">
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.html">Home</a>
+        <a class="nav-link text-white" href="#!">Home</a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#">Info Wisata</a>
@@ -63,7 +68,7 @@
         <a class="nav-link text-white" href="#!event">Event</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="akomodasi.html">Akomodasi</a>
+        <a class="nav-link text-white" href="#!akomodasi">Akomodasi</a>
       </li>
         <li class="nav-item">
         <a class="nav-link text-white" href="kuliner.html">Kuliner</a>
@@ -146,7 +151,7 @@
         </div>
     </div>
 </div>    
-</div>   
+</div>  
    
 <script>
     function myMap() {
