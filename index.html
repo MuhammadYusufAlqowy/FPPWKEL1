@@ -26,57 +26,56 @@
     		.when("/event", {
     			templateUrl : "event.htm"
     		})
-        .when("/event-musik", {
-          templateUrl : "event-musik.htm"
-        })
-        .when("/event-seni", {
-          templateUrl : "event-seni.htm"
-        })
-        .when("/event-kuliner", {
-          templateUrl : "event-kuliner.htm"
-        })
-        .when("/event-festival", {
-          templateUrl : "event-festival.htm"
-        })
-        .when("/event-olahraga", {
-          templateUrl : "event-olahraga.htm"
-        })
-            .when("/map", {
-    			templateUrl : "map.htm"
-    		})
+            .when("/event-musik", {
+              templateUrl : "event-musik.htm"
+            })
+            .when("/event-seni", {
+              templateUrl : "event-seni.htm"
+            })
+            .when("/event-kuliner", {
+              templateUrl : "event-kuliner.htm"
+            })
+            .when("/event-festival", {
+              templateUrl : "event-festival.htm"
+            })
+            .when("/event-olahraga", {
+              templateUrl : "event-olahraga.htm"
+            })
+            .when("/peta", {
+              templateUrl : "peta.htm"
+            })
             .when("/akomodasi", {
-          templateUrl : "akomodasi.htm"
-        })
-            .when("/wisata", {
-          templateUrl : "wisata.htm"
-        })
-            .when("/wisata-pantai", {
-          templateUrl : "wisata-pantai.htm"
-        })
-            .when("/wisata-alam", {
-          templateUrl : "wisata-alam.htm"
-        })
-            .when("/wisata-museum", {
-          templateUrl : "wisata-museum.htm"
-        })
-            .when("/wisata-minat-khusus", {
-          templateUrl : "wisata-minat-khusus.htm"
-        })
-            .when("/wisata-budaya-dan-sejarah", {
-          templateUrl : "wisata-budaya-dan-sejarah.htm"
-        })
-    	});
-            
+              templateUrl : "akomodasi.htm"
+            })
+                .when("/wisata", {
+              templateUrl : "wisata.htm"
+            })
+                .when("/wisata-pantai", {
+              templateUrl : "wisata-pantai.htm"
+            })
+                .when("/wisata-alam", {
+              templateUrl : "wisata-alam.htm"
+            })
+                .when("/wisata-museum", {
+              templateUrl : "wisata-museum.htm"
+            })
+                .when("/wisata-minat-khusus", {
+              templateUrl : "wisata-minat-khusus.htm"
+            })
+                .when("/wisata-budaya-dan-sejarah", {
+              templateUrl : "wisata-budaya-dan-sejarah.htm"
+            })
+            });
     </script>
-  
+      
 </head>
     
     
-<body style="margin:0px; height: 1500px;" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">    
+<body style="margin:0px; height: 100px;" id="myPage">    
 <div ng-app="myApp" class="container-fluid">  
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md bg-success navbar-dark sticky-top">
-  <a class="navbar-brand text-white" href="#!">COMPANY LOGO</a>
+<nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" id="navbar">
+  <a class="navbar-brand" href="#!"><img src="images/logo/wontenjogja_putih.png" style="height: 50px;"></a>
 <!-- Collapse navbar  -->   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -108,84 +107,102 @@
         <li class="nav-item">
         <a class="nav-link text-white" href="#!peta">Peta</a>
       </li> 
-        <form class="form-inline" action="#">
-            <input class="form-control mr-sm-2 elipse" type="text" placeholder="Search">
-            <button class="btn btn-danger elipse" type="submit"><i class="fas fa-search"></i></button>
-          </form>  
+        <form class="form-inline" action="#!wisata">
+            <div class="btn-group search">
+            <input type="text" placeholder="Search.." name="search" class="form-control mb-2">
+              <button class="btn mb-2" type="submit"><i class="fa fa-search text-dark"></i></button>
+            </div>    
+        </form>  
     </ul>
   </div> 
-
 </nav> 
 
-<!-- ng-view-->    
+<!-- ng-view -->    
 <ng-view></ng-view>
-</div>
 </div>
 <!-- Footer -->    
 <div class="container-fluid bg-success" style="padding-top: 50px;">
 <div class="container bg-success text-white">
     <div class="row bg-success text-white" style=" padding-bottom: 20px; border-bottom: 0.1px solid white">
-        <div class="col-sm-4">
-        <img src="images/logo/wontenjogja_putih.png" alt="Jogja" class="mx-auto d-block img-fluid" style="width: 80%; height: auto;">
-        <br>  
-            <h4 class="footer">
-            <a href="#" class="link">Home</a><br>
-            <a href="#" class="link">About Us</a><br>
-            <a href="#" class="link">Contact</a><br>
-            <a href="#" class="link">Services</a><br>
-            </h4>    
-        </div>
-        <div class="col-md-4">
-            <h2>Today Update</h2>
+        <div class="col-md-3 col-lg-3 col-sm-6">
+            <h3>Alamat Kantor</h3>
             <br>
-            <h4><a href="#" class="link">Yogyakara menjadi destinasi wisata terbaik selain Bali dan Bandung</a></h4>
-            <h4><a href="#" class="link">Yogyakara menjadi destinasi wisata terbaik selain Bali dan Bandung</a></h4>
-            <h4><a href="#" class="link">Yogyakara menjadi destinasi wisata terbaik selain Bali dan Bandung</a></h4>
-        </div>
-        <div class="col-md-4">
-            <h2>Subscribe</h2>
+            <h6>Jl. Ringroad Utara, Condong Catur, Sleman, Yogyakarta</h6>
+            <br><br><br>
+            <h3>Kontak</h3>
             <br>
-            <h4>Ikuti kami untuk mendapatkan informasi terbaru yang akan dikirim lewat email</h4>
+            <h6>Email   : wontenjogja@company.com</h6>
+            <h6>Tlp     : (021) 798 000</h6>
+            <h6>Fax     : (021) 798 001</h6>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6">
+            <h3>Mobile Apps</h3>
+            <br>
+            <h6>Download aplikasi mobile kami</h6><br>
+            <div class="btn-group">
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">Android</a>
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">iOS</a>
+            </div>    
+            <br><br>
+            <h3>Subscribe</h3>
+            <br>
+            <h6>Subscribe untuk mendapatkan informasi terbaru dari kami</h6><br>
             <form class="form-inline" action="#">
-                <input type="email" placeholder ="Email" class="form-control mb-2 mr-sm-2 elipse">
-                <button type="submit" class="btn btn-danger mb-2 elipse">Subscribe</button>
+                <div class="btn-group subscribe">
+                <input type="email" placeholder ="Email" class="form-control mb-2">
+                <button type="submit" class="btn btn-dark mb-2">Subscribe</button>
+                </div>    
             </form>
-            <br>
-            <h2>Connect With Us</h2>
-            <br>
-            <h4 class="text-white">
-                <a href="#" class="text-danger"><i class="fab fa-facebook-square fa-2x"></i></a>
-                <a href="#" class="text-danger"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#" class="text-danger"><i class="fab fa-twitter-square fa-2x"></i></a>
-                <a href="#" class="text-danger"><i class="fab fa-github-square fa-2x"></i></a>
-                <a href="#" class="text-danger"><i class="fab fa-google-plus-g fa-2x"></i></a>
-            </h4>    
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div id="map" style="width:100%;height:400px;"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 text-center" style="margin: 0px; padding-top: 20px;">
-            <p class="footer">Copyright &copy; 2018 All Right Reserved <a href="#!" class="link">WontenJogja.com</a></p>
+        <div class="col-md-8 col-lg-8 col-sm-8" style="margin: 0px; padding-top: 20px;">
+            <h6>Copyright &copy; 2018 All Right Reserved <a href="#!" class="link">WontenJogja.com</a></h6>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-4 text-right">
+            <p style="padding: 10px 0px">
+                <a href="#" class="text-light"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-github-square fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-google-plus-g fa-2x"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-youtube fa-2x"></i></a>
+            </p>    
         </div>
     </div>
 </div>    
-</div>  
-   
-<script>
-    function myMap() {
-      var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-      var mapCanvas = document.getElementById("map");
-      var mapOptions = {center: myCenter, zoom: 5};
-      var map = new google.maps.Map(mapCanvas, mapOptions);
-      var marker = new google.maps.Marker({position:myCenter});
-      marker.setMap(map);
+</div>
+<!-- Navbar -->    
+<script>    
+window.onscroll = function() {scrollFunction()};
 
-      // Zoom to 9 when clicking on marker
-      google.maps.event.addListener(marker,'click',function() {
-        map.setZoom(9);
-        map.setCenter(marker.getPosition());
-      });
-    }
+function scrollFunction() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+     document.getElementById("navbar").classList.add("bg-success");
+  } else {
+      document.getElementById("navbar").classList.remove("bg-success");
+  }
+}
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFr-5W01Ysf126Yjul98jpCw43ibxhxWk&callback=myMap"></script>    
+<!-- Google Maps -->   
+<script>
+function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var myCenter = new google.maps.LatLng(-7.7597759, 110.40882209999995);
+    var mapOptions = {center: myCenter, zoom: 17};
+    var map = new google.maps.Map(mapCanvas,mapOptions);
+    var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+    });
+  marker.setMap(map); 
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFr-5W01Ysf126Yjul98jpCw43ibxhxWk&callback=myMap"></script>
+    
 </body>    
 </html>
