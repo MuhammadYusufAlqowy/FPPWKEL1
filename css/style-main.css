@@ -97,6 +97,19 @@ background-position: 50% 50%;
     font-size: 14px;
 }
 
+.menu-home img{
+    width: auto;
+    height: 150px;
+    padding: 10px;
+}
+.menu-home a:hover{
+    opacity: 0.3;
+}
+
+.tab td{
+    padding-right: 10px;
+}
+
 /*Hover*/
 .hovereffect {
 width:100%;
