@@ -1,3 +1,4 @@
+/*CSS Yusuf*/
 .navbar{
     background-color: transparent;
     font-weight: bold;
@@ -52,13 +53,13 @@ a:hover, .link:hover{
     height: 600px;
     padding-top: 200px;
 }
-
-
-.navbar-brand
-{
-    font-size: 30px;
+/* Header Parallax Element Style*/ 
+.parallax {
+min-height: 600px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
 }
-
 .search input[type=text] {
     width: 140px;
     box-sizing: border-box;
@@ -91,8 +92,10 @@ a:hover, .link:hover{
     font-size: 14px;
     border-radius: 0px 50px 50px 0px;
 }
-
-
+.social-media a{
+    padding-left: 5px;
+    font-size: 14px;
+}
 
 /*Hover*/
 .hovereffect {
@@ -166,7 +169,7 @@ transition-delay:.2s;
 }
 /*Hover*/
 
-
+/*CSS Yusuf*/
 
 double-ring {
   0% {
