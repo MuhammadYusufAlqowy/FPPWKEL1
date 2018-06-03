@@ -17,16 +17,16 @@
    
 
     <script>
-    	var app = angular.module("myApp", ["ngRoute"]);
+      var app = angular.module("myApp", ["ngRoute"]);
         app.config(function($routeProvider)
-    	{
-    		$routeProvider
-    		.when("/",{
-    			templateUrl : "home.htm"
-    		})
-    		.when("/event", {
-    			templateUrl : "event.htm"
-    		})
+      {
+        $routeProvider
+        .when("/",{
+          templateUrl : "home.htm"
+        })
+        .when("/event", {
+          templateUrl : "event.htm", controller :"jsonDATA"
+        })
             .when("/event-musik", {
               templateUrl : "event-musik.htm"
             })
@@ -66,13 +66,21 @@
                 .when("/wisata-budaya-dan-sejarah", {
               templateUrl : "wisata-budaya-dan-sejarah.htm"
             })
-            });
+      });
+
+      app.controller('jsonDATA', function($scope, $http) {
+      $http.get("http://api.apixu.com/v1/forecast.json?key=f838c6503ec34d0aab255354180306&q=Yogyakarta")
+      .then(function (response) {
+        $scope.info=response.data;
+      });
+    });
+
     </script>
       
 </head>
     
     
-<body style="margin:0px;" id="myPage">    
+<body style="margin:0px; height: 100px;" id="myPage">    
 <div ng-app="myApp" class="container-fluid">  
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" id="navbar">
@@ -127,11 +135,10 @@
 
 <!-- ng-view -->    
 <ng-view></ng-view>
-</div>
 <!-- Footer -->    
 <div class="container-fluid bg-success" style="padding-top: 50px;">
 <div class="container bg-success text-white">
-    <div class="row bg-success text-white" style=" padding-bottom: 20px; border-bottom: 0.1px solid white">
+    <div ng-app="myApp" ng-controller="jsonDATA" class="row bg-success text-white" style=" padding-bottom: 20px; border-bottom: 0.1px solid white">
         <div class="col-md-3 col-lg-3 col-sm-6">
             <h3>Alamat Kantor</h3>
             <br>
@@ -139,11 +146,11 @@
             <br><br><br>
             <h3>Kontak</h3>
             <br>
-            <h6>wontenjogja@company.com</h6>
-            <h6>(021) 798 000</h6>
-            <h6>(021) 798 001</h6>
+            <h6>Email   : wontenjogja@company.com</h6>
+            <h6>Tlp     : (021) 798 000</h6>
+            <h6>Fax     : (021) 798 001</h6>
         </div>
-        <div class="col-md-4 col-lg-4 col-sm-6 text-center">
+        <div class="col-md-3 col-lg-3 col-sm-6 text-center">
             <h3>Aplikasi Mobile</h3>
             <br>
             <h6>Download aplikasi mobile kami</h6>
@@ -162,8 +169,44 @@
                 </div>    
             </form>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-12">
+        <div class="col-md-3 col-lg-3 col-sm-6">
             <div id="map" style="width:100%;height:400px;"></div>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6" ng-app="myApp" ng-controller="jsonDATA">
+            <h3> Info Cuaca</h3>
+            <img src="images/cuaca-animasi.gif" width="40%"> 
+            <div class="btn-group">
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">Kota &nbsp :</a>
+                
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 150px;">{{info.location.name}}</a>
+            </div> 
+            <div class="btn-group">
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">Suhu &nbsp :
+                  <br>Max &nbsp :</a>
+                <br>
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 150px;">{{info.current.temp_c}} C
+                  <br>
+                  {{info.forecast.forecastday[0].day.maxtemp_c}} C
+                 </a>
+            </div> 
+            <div class="btn-group">
+               <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">Cuaca &nbsp :
+                <br>
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 150px;"><img src="{{info.current.condition.icon}}" width="23%">
+                {{info.current.condition.text}}</a>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">Sunrise &nbsp :
+                  <br>Sunset &nbsp :</a>
+                <br>
+                <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 150px;">{{info.forecast.forecastday[0].astro.sunrise}}
+                  <br>
+                  {{info.forecast.forecastday[0].astro.sunset}}  
+                  
+                </a>
+            </div> 
+            <div class="text-right">
+            <i>Update&nbsp : {{info.current.last_updated}} </i></a></div> 
         </div>
     </div>
     <div class="row">
@@ -171,7 +214,7 @@
             <h6>Copyright &copy; 2018 All Right Reserved <a href="#!" class="link">WontenJogja.com</a></h6>
         </div>
         <div class="col-md-4 col-lg-4 col-sm-4 text-right">
-            <p style="padding: 10px 0px" class="social-media float-right">
+            <p style="padding: 10px 0px">
                 <a href="#" class="text-light"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
                 <a href="#" class="text-light"><i class="fab fa-twitter-square fa-2x"></i></a>
