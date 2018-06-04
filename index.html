@@ -87,8 +87,9 @@
 <body style="margin:0px; height: 100px;" id="myPage">    
 <div ng-app="myApp" class="container-fluid">  
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" id="navbar">
+<nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" id="navbar"  ng-app="myApp" ng-controller="jsonDATA">
   <a class="navbar-brand" href="index.html"><img src="images/logo/wontenjogja_putih.png" style="height: 50px;"></a>
+<img src="{{info.current.condition.icon}}" style="height: 40px;"><p class="mt-2" style="font-size: 14px;">{{info.location.name}} {{info.current.temp_c}} &#x2103;</p>    
 <!-- Collapse navbar  -->   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -139,6 +140,7 @@
 
 <!-- ng-view -->    
 <ng-view></ng-view>
+</div>    
 <!-- Footer -->    
 <div class="container-fluid bg-success" style="padding-top: 50px;">
 <div class="container bg-success text-white">
@@ -198,6 +200,7 @@
                 <br>
                 <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 150px;"><img src="{{info.current.condition.icon}}" width="23%">
                 {{info.current.condition.text}}</a>
+                </a>
             </div>
             <div class="btn-group">
                 <a href="#" class="btn btn-danger mb-2 elipse" role="button" style="width: 120px;">Sunrise &nbsp :
@@ -210,7 +213,7 @@
                 </a>
             </div> 
             <div class="text-right">
-            <i>Update&nbsp : {{info.current.last_updated}} </i></a></div> 
+            <i>Update&nbsp : {{info.current.last_updated}} </i></div> 
         </div>
     </div>
     <div class="row">
