@@ -50,12 +50,12 @@ a:hover, .link:hover{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 600px;
+    height: 550px;
     padding-top: 200px;
 }
 /* Header Parallax Element Style*/ 
 .parallax {
-min-height: 600px;
+min-height: 550px;
 background-attachment: fixed;
 background-size: cover;
 background-position: 50% 50%;
@@ -102,8 +102,11 @@ background-position: 50% 50%;
     height: 150px;
     padding: 10px;
 }
-.menu-home a:hover{
-    opacity: 0.3;
+.menu-home a:hover, img:hover{
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+    transition:all .2s ease-in-out
 }
 
 .tab td{

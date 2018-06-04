@@ -84,10 +84,10 @@
 </head>
     
     
-<body style="margin:0px; height: 100px;" id="myPage">    
-<div ng-app="myApp" class="container-fluid">  
+<body style="margin:0px; height: 100px;" id="myPage" ng-app="myApp" ng-controller="jsonDATA">    
+<div class="container-fluid">  
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" id="navbar"  ng-app="myApp" ng-controller="jsonDATA">
+<nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" id="navbar">
   <a class="navbar-brand" href="index.html"><img src="images/logo/wontenjogja_putih.png" style="height: 50px;"></a>
 <img src="{{info.current.condition.icon}}" style="height: 40px;"><p class="mt-2" style="font-size: 14px;">{{info.location.name}} {{info.current.temp_c}} &#x2103;</p>    
 <!-- Collapse navbar  -->   
@@ -178,7 +178,7 @@
         <div class="col-md-3 col-lg-3 col-sm-6">
             <div id="map" style="width:100%;height:400px;"></div>
         </div>
-        <div class="col-md-3 col-lg-3 col-sm-6" ng-app="myApp" ng-controller="jsonDATA">
+        <div class="col-md-3 col-lg-3 col-sm-6">
             <h3> Info Cuaca</h3>
             <img src="images/cuaca-animasi.gif" width="40%"> 
             <div class="btn-group">
