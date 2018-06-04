@@ -24,6 +24,7 @@
         .when("/",{
           templateUrl : "home.htm"
         })
+        // event
         .when("/event", {
           templateUrl : "event.htm", controller :"jsonDATA"
         })
@@ -42,34 +43,129 @@
             .when("/event-olahraga", {
               templateUrl : "event-olahraga.htm"
             })
-            .when("/peta", {
-              templateUrl : "peta.htm"
-            })
-            .when("/akomodasi", {
-              templateUrl : "akomodasi.htm"
-            })
-                .when("/wisata", {
-              templateUrl : "wisata.htm"
-            })
-                .when("/kuliner", {
-              templateUrl : "Kuliner-jogja.htm"
-            })
-
-                .when("/wisata-pantai", {
+        .when("/peta", {
+          templateUrl : "peta.htm"
+        })
+        .when("/akomodasi", {
+          templateUrl : "akomodasi.htm"
+        })
+        // kuliner
+        .when("/kuliner", {
+          templateUrl : "Kuliner-jogja.htm"
+        })
+        // wisata
+        .when("/wisata", {
+          templateUrl : "wisata.htm"
+        })
+            .when("/wisata-pantai", {
               templateUrl : "wisata-pantai.htm"
             })
-                .when("/wisata-alam", {
+                .when("/pantai-baron-konten", {
+                  templateUrl : "konten/pantai-baron-konten.htm"
+                })
+                .when("/pantai-jungwok-konten", {
+                  templateUrl : "konten/pantai-jungwok-konten.htm"
+                })
+                .when("/pantai-parangtritis-konten", {
+                  templateUrl : "konten/pantai-parangtritis-konten.htm"
+                })
+                .when("/pantai-sadranan-konten", {
+                  templateUrl : "konten/pantai-sadranan-konten.htm"
+                })
+                .when("/pantai-sepanjang-konten", {
+                  templateUrl : "konten/pantai-sepanjang-konten.htm"
+                })
+                .when("/pantai-watu-kodok-konten", {
+                  templateUrl : "konten/pantai-watu-kodok-konten.htm"
+                })
+
+            .when("/wisata-alam", {
               templateUrl : "wisata-alam.htm"
             })
-                .when("/wisata-museum", {
+                .when("/gumuk-pasir-konten", {
+                  templateUrl : "konten/gumuk-pasir-konten.htm"
+                })
+                .when("/kebun-teh-konten", {
+                  templateUrl : "konten/kebun-teh-konten.htm"
+                })
+                .when("/lava-bantal-konten", {
+                  templateUrl : "konten/lava-bantal-konten.htm"
+                })
+                .when("/bukit-klangon-konten", {
+                  templateUrl : "konten/bukit-klangon-konten.htm"
+                })
+                .when("/bukit-paralayang-parangtritis-konten", {
+                  templateUrl : "konten/bukit-paralayang-parangtritis-konten.htm"
+                })
+                .when("/watu-lumbung-konten", {
+                  templateUrl : "konten/watu-lumbung-konten.htm"
+                })
+
+            .when("/wisata-museum", {
               templateUrl : "wisata-museum.htm"
             })
-                .when("/wisata-minat-khusus", {
+                .when("/de-mata-trick-konten", {
+                  templateUrl : "konten/de-mata-trick-konten.htm"
+                })
+                .when("/keraton-konten", {
+                  templateUrl : "konten/keraton-konten.htm"
+                })
+                .when("/museum-affandi-konten", {
+                  templateUrl : "konten/museum-affandi-konten.htm"
+                })
+                .when("/museum-dirgantara-mandala-konten", {
+                  templateUrl : "konten/museum-dirgantara-mandala-konten.htm"
+                })
+                .when("/museum-perjuangan-konten", {
+                  templateUrl : "konten/museum-perjuangan-konten.htm"
+                })
+                .when("/museum-gembiraloka-konten", {
+                  templateUrl : "konten/museum-gembiraloka-konten.htm"
+                })
+                
+            .when("/wisata-minat-khusus", {
               templateUrl : "wisata-minat-khusus.htm"
             })
-                .when("/wisata-budaya-dan-sejarah", {
+                .when("/baron-technopark-konten", {
+                  templateUrl : "konten/baron-technopark-konten.htm"
+                })
+                .when("/bukit-bintang-konten", {
+                  templateUrl : "konten/bukit-bintang-konten.htm"
+                })
+                .when("/jogja-bay-konten", {
+                  templateUrl : "konten/jogja-bay-konten.htm"
+                })
+                .when("/the-world-landmark-konten", {
+                  templateUrl : "konten/the-world-landmark-konten.htm"
+                })
+                .when("/merapi-golf-konten", {
+                  templateUrl : "konten/merapi-golf-konten.htm"
+                })
+                .when("/wisata-kalibiru-konten", {
+                  templateUrl : "konten/wisata-kalibiru-konten.htm"
+                })
+
+            .when("/wisata-budaya-dan-sejarah", {
               templateUrl : "wisata-budaya-dan-sejarah.htm"
             })
+                .when("/candi-prambanan-konten", {
+                  templateUrl : "konten/candi-prambanan-konten.htm"
+                })
+                .when("/masangin-konten", {
+                  templateUrl : "konten/masangin-konten.htm"
+                })
+                .when("/tugu-jogja-konten", {
+                  templateUrl : "konten/tugu-jogja-konten.htm"
+                })
+                .when("/candi-ijo-konten", {
+                  templateUrl : "konten/candi-ijo-konten.htm"
+                })
+                .when("/grebeg-sekaten-konten", {
+                  templateUrl : "konten/grebeg-sekaten-konten.htm"
+                })
+                .when("/pabrik-gula-madukismo-konten", {
+                  templateUrl : "konten/pabrik-gula-madukismo-konten.htm"
+                })
       });
 
             app.controller('jsonDATA', function($scope, $http) {
