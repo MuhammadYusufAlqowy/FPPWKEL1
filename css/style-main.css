@@ -44,18 +44,23 @@ a:hover, .link:hover{
   height: 100%;
 }
 .jumbotron{
+/*
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 550px;
+*/
+    background-color: transparent;
+    height: 600px;
     padding-top: 200px;
 }
-/* Header Parallax Element Style*/ 
+*{
+    margin: 0px;
+}
 .parallax {
-min-height: 550px;
+max-height: 600px;
 background-attachment: fixed;
 background-size: cover;
 background-position: 50% 50%;
@@ -102,14 +107,31 @@ background-position: 50% 50%;
     height: 150px;
     padding: 10px;
 }
-.menu-home a:hover, img:hover{
+.menu-home a:hover, .menu-home img:hover{
     -ms-transform:scale(1.2);
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
     transition:all .2s ease-in-out
 }
 
+video{
+    object-fit: cover;
+    height: 550px;
+    width: 100%;
+}
+
 .tab td{
+    padding-right: 10px;
+}
+
+.breadcrumb{
+    padding-top: 20px;
+}
+table tr,td{
+    padding: 0px;
+}
+table td{
+    font-size: 16px;
     padding-right: 10px;
 }
 
